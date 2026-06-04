@@ -5,7 +5,7 @@ npm i
 npm run dev
 http://localhost:5173/projects
 
--Data loading via react-routeur https://reactrouter.com/start/framework/data-loading
+- Data loading via react-routeur https://reactrouter.com/start/framework/data-loading
 - MUI for UI
 
 Next steps:
