@@ -1,0 +1,140 @@
+{
+  "projects": [
+    {
+      "id": "p_001",
+      "project_name": "Project Helios",
+      "client_name": "Acme Capital",
+      "target_name": "Northwind Logistics",
+      "industry": "Logistics",
+      "status": "active",
+      "details": {
+        "fte_bucket": "100-500",
+        "revenue_bucket": "€100M-€500M"
+      },
+      "members": [
+        { "user_id": "u_01", "name": "Sara De Smet", "role": "OWNER" },
+        { "user_id": "u_02", "name": "Tom Janssens", "role": "MEMBER" },
+        { "user_id": "u_03", "name": "Lien Peeters", "role": "MEMBER" }
+      ],
+      "entities": [
+        {
+          "id": "e_01",
+          "name": "Northwind Logistics BV",
+          "currency": "EUR",
+          "start_date": "2022-01-01",
+          "end_date": "2024-12-31",
+          "is_active": true
+        },
+        {
+          "id": "e_02",
+          "name": "Northwind Logistics France SAS",
+          "currency": "EUR",
+          "start_date": "2022-01-01",
+          "end_date": "2024-12-31",
+          "is_active": true
+        }
+      ]
+    },
+    {
+      "id": "p_002",
+      "project_name": "Project Atlas",
+      "client_name": "Bregman Partners",
+      "target_name": "Vertex Manufacturing",
+      "industry": "Manufacturing",
+      "status": "active",
+      "details": {
+        "fte_bucket": "500-1000",
+        "revenue_bucket": "€100M-€500M"
+      },
+      "members": [
+        { "user_id": "u_04", "name": "David Cohen", "role": "OWNER" }
+      ],
+      "entities": [
+        {
+          "id": "e_03",
+          "name": "Vertex GmbH",
+          "currency": "EUR",
+          "start_date": "2021-01-01",
+          "end_date": "2023-12-31",
+          "is_active": false
+        }
+      ]
+    },
+    {
+      "id": "p_003",
+      "project_name": "Project Mercury",
+      "client_name": "Acme Capital",
+      "target_name": "BlueWave SaaS",
+      "industry": "Software",
+      "status": "active",
+      "details": {
+        "fte_bucket": "10-100",
+        "revenue_bucket": "€10M-€50M"
+      },
+      "members": [],
+      "entities": [
+        {
+          "id": "e_04",
+          "name": "BlueWave Holdings Ltd",
+          "currency": "GBP",
+          "start_date": "2023-01-01",
+          "end_date": "2024-12-31",
+          "is_active": true
+        }
+      ]
+    },
+    {
+      "id": "p_004",
+      "project_name": "Project Polaris",
+      "client_name": "Sienna Equity",
+      "target_name": "Riverside Foods",
+      "industry": "Food & Beverage",
+      "status": "archived",
+      "details": {
+        "fte_bucket": "100-500",
+        "revenue_bucket": "€100M-€500M"
+      },
+      "members": [
+        { "user_id": "u_05", "name": "Marie Dubois", "role": "OWNER" },
+        { "user_id": "u_06", "name": "Jonas Berg", "role": "MEMBER" }
+      ],
+      "entities": [
+        {
+          "id": "e_05",
+          "name": "Riverside Foods NV",
+          "currency": "EUR",
+          "start_date": "2022-01-01",
+          "end_date": "2024-12-31",
+          "is_active": true
+        }
+      ]
+    },
+    {
+      "id": "p_005",
+      "project_name": "Project Orion",
+      "client_name": "Bregman Partners",
+      "target_name": "Helix Health",
+      "industry": "Healthcare",
+      "status": "active",
+      "details": {
+        "fte_bucket": "1000+",
+        "revenue_bucket": "€500M+"
+      },
+      "members": [
+        { "user_id": "u_07", "name": "Eva Novak", "role": "OWNER" },
+        { "user_id": "u_08", "name": "Pieter Van Damme", "role": "MEMBER" },
+        { "user_id": "u_09", "name": "Anna Kowalski", "role": "MEMBER" }
+      ],
+      "entities": [
+        {
+          "id": "e_06",
+          "name": "Helix Health AG",
+          "currency": "CHF",
+          "start_date": "2020-01-01",
+          "end_date": "2024-12-31",
+          "is_active": true
+        }
+      ]
+    }
+  ]
+}
