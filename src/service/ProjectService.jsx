@@ -36,9 +36,8 @@ export async function getProject(id) {
 }
 
 export async function addMember(member) {
-    await delay(LATENCY)
     return {
-        user_id: crypto.randomUUID(),
+        user_id: member.user_id,
         name: member.name.trim(),
         email: member.email.trim(),
         role: member.role,

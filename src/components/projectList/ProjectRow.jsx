@@ -16,7 +16,7 @@ export default function ProjectRow({project}) {
         [navigate, project.id]
     )
     return (
-        <TableRow hover onClick={handleClick} tabIndex={0} sx={rowSx}>
+        <TableRow hover onClick={handleClick} sx={rowSx}>
             <TableCell sx={{fontWeight: 600}}>{project.project_name}</TableCell>
             <TableCell>{project.client_name}</TableCell>
             <TableCell>{project.target_name}</TableCell>

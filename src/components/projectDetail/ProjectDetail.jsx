@@ -72,6 +72,11 @@ function ProjectView({project}) {
         []
     )
 
+    const handleMemberRemoved = useCallback(
+        (userId) => setMembers((prev) => prev.filter((member) => member.user_id !== userId)),
+        []
+    )
+
     return (
         <>
             <Box sx={{display: 'flex', alignItems: 'center', mb: 1.5}}>
@@ -161,6 +166,7 @@ function ProjectView({project}) {
                         projectId={project.id}
                         existingEmails={existingEmails}
                         onAdded={handleMemberAdded}
+                        onRemove={handleMemberRemoved}
                     />
                 </Box>
 

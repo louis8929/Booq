@@ -39,7 +39,7 @@ const successText = {fontSize: 12, color: 'success.main', fontWeight: 500}
 const errorText = {fontSize: 12, color: 'error.main'}
 const roleField = {minWidth: 120}
 
-export default function AddMemberForm({existingEmails = [], onAdded}) {
+export default function AddMemberForm({existingEmails = [], onAdded, onRemove}) {
     const [form, setForm] = useState(EMPTY_FORM)
     const [errors, setErrors] = useState({})
     const [status, setStatus] = useState('')
@@ -92,14 +92,20 @@ export default function AddMemberForm({existingEmails = [], onAdded}) {
 
         setStatus('loading')
         setSubmitError('')
-
+        const member = {
+            user_id: crypto.randomUUID(),
+            name: form.name.trim(),
+            email: form.email.trim(),
+            role: form.role,
+        }
         try {
-            const member = await addMember({...form})
             onAdded(member)
+            await addMember(member)
             setForm(EMPTY_FORM)
             setErrors({})
             setStatus('success')
         } catch (error) {
+            onRemove(member.user_id)
             setSubmitError(error?.message ?? 'Could not add member.')
             setStatus('error')
         }
