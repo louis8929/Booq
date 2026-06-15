@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 antialiased;
+}
+
+/* VexFlow SVG theming: inherit the page color so notation works in dark mode */
+.notation-host svg {
+  fill: currentColor;
+}
+.notation-host svg .vf-stavenote,
+.notation-host svg path,
+.notation-host svg rect.vf-stave {
+  stroke: currentColor;
+}
+.notation-host {
+  @apply text-zinc-900 dark:text-zinc-100;
+}
+
+/* Note highlighting during playback */
+.notation-host svg g.vf-hit-active * {
+  fill: #f59e0b !important;
+  stroke: #f59e0b !important;
+}
+
+/* Playback cursor */
+.playback-cursor {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  border-radius: 1px;
+  background: #f59e0b;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.8);
+  pointer-events: none;
+  transition: none;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-area, .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    position: absolute;
+    inset: 0;
+    color: black !important;
+  }
+  .playback-cursor {
+    display: none;
+  }
+}
